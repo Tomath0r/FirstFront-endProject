@@ -1,0 +1,410 @@
+/* Import of the fonts from google*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+html, body {
+    margin: 0px;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  .wrapper {
+    border-radius: 10px;
+    margin: 5px auto;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.712);
+  }
+  
+  .logo {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    color: #FFF;
+    font-weight: bold;
+    padding: 0px 15px;
+  }
+  
+  /* Select all ul inside all nav */
+  nav ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+  }
+  
+  /* Select all li inside all nav */
+  nav li {
+    display: block;
+    float: left;
+    text-align: center;
+  }
+  
+  /* Select all ul that are a direct child of all li in all nav */
+  nav li > ul {
+    display: none;
+    position: absolute;
+  }
+  
+  /* Select all li that exist inside all li inside all nav */
+  nav li li {
+    background-color: rgb(255, 250, 250);
+  }
+  
+  /* Select all li that are a direct child of all li that are hovered inside all nav */
+  nav li:hover > ul {
+    display: block;  
+  }
+  
+  /* Select all nav */
+  nav {
+    float: right;
+    margin-right: 15px;
+  }
+  
+/* Select the elements in the header bar */
+  .special1,.special2{
+    display: block;
+    padding: 0px 15px;
+    height: 50px;
+    line-height: 50px;
+    color: #000000;
+    text-decoration: none;
+  }
+
+  /* apply a font */
+  .police{
+    font-family: 'RocknRoll One', sans-serif;
+    padding: 8px; border: 2px solid black;
+    background-color: white;
+  }
+
+  
+  /* apply red color to the element*/
+  .special1:hover {
+    color: rgb(212, 10, 10);
+  }
+
+  /* apply green color to the element*/
+  .special2:hover {
+    color: rgb(16, 187, 10);
+  }
+
+
+/* space the instagram logo */
+  .special_hover{
+    margin-left: 100px;
+    
+  }
+  /* hover that makes the image more opaque */
+  .special_hover:hover{
+    opacity: 0.5;
+  }
+  
+  /* Select all header */
+  header {
+    padding: 10px 16px;
+    border-radius: 4px 4px 0px 0px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    position: fixed;
+  }
+  
+  /* Select all main */
+  main {
+    background-image: url('Flag_Gif.gif');
+    background-repeat:repeat;
+    background-size:contain;
+    padding: 200px;
+    height: 100%;
+  }
+  
+  /* Select all h1 */
+  h1 {
+    margin-top: -50px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    
+  }
+  
+  /* Select all footer */
+  footer {
+    height: 50px;
+    line-height: 50px;
+    background-color: rgb(255, 253, 253);
+    border-radius: 0px 0px 4px 4px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+
+  /* Put some space between the text elements */
+  .space{
+    line-height: 400%;
+  }
+  /* Differente space between the text elements */
+  #space{
+    margin-bottom: 80px;
+  }
+
+
+  /* select all h2 */
+  h2 {
+    margin-top: -80px;
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+  }
+  /* select all h3 */
+  h3{
+    text-decoration: underline;
+  }
+
+
+
+   /* Code to display the 3x3 galery */
+
+
+  .special-image {
+    text-align: center;
+  }
+  /* select the image the the special-image element */
+  .special-image img {
+    width: 400px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .special-image2 {
+    text-align: center;
+  }
+  /* select the image the the special-image2 element */
+  .special-image2 img {
+    width: 800px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  /* select the image the the special-image3 element */
+  .special-image3 img {
+    text-align: right;
+    width: 300px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  /* select the div the the special-image3 element */
+  .special-image3 div {
+    text-align: center;
+    width: 300px;
+    display:inline-table;
+  }
+
+
+  
+  
+
+
+/* Carousel code */
+  .carousel {
+  
+    position: relative;
+    width: 500px;
+    height: 250px; 
+    
+    /* This ensures only one of your images is shown at any one time */
+    overflow: hidden;
+    
+    /* To center the images */
+    margin: auto;
+    
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+  }
+  
+
+
+  /* Contains the carousel images */
+
+  
+  .carousel-images {
+    
+    /*
+      We need fine control over the position of our carousel images, so
+      for this we will use position: absolute;
+    */
+    position: absolute;
+    
+    /*
+      The z-index property can be used on elements with position: absolute;
+      It defines the order elements are stacked on the page (Z Axis).
+    */
+    z-index: 1;
+    
+    /*
+      With position: absolute; we can define an offset to the initial position
+      This can be: top, bottom, left or right. In this case we'll pick left.
+    */
+    left: 0;
+    
+    /*
+      These values could be updated based on the size and number of images 
+      via JS if you want.
+    */
+    width: 4500px; 
+    height: 250px;
+    
+    /* Sets the transition between images to 1 seconde */
+    transition: left 1s ease-in-out;
+  }
+  
+  /*
+    Image size set manually
+  */
+  .carousel-images img {
+    width: 500px;
+    height: 250px;
+  }
+  
+  /*
+    This contains the navigation buttons for the slideshow. 
+  */
+  .carousel nav {
+    
+    /* This allows us to place the navigation over the images */
+    position: absolute;
+    z-index: 2; /* More than the z-index of the image */
+    
+    /* This element is now the size of our carousel element */
+    width: 500px;
+    height: 200px;
+    
+    /* This will centre our buttons vertically */
+    line-height: 200px;
+  }
+  
+  /* This gives or nav buttons some style. */
+
+  .carouselPrev0{
+    text-decoration: none;
+    color: rgb(176, 243, 169);
+    font-weight: bold;
+    font-size: 30pt;
+    padding: 0px 25px;
+    
+    /* This transitions the next buttons when we hover */
+    transition: all 0.8s ease;
+    
+    /* These properties are the ones that change on hover */
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .carouselNext0{
+    text-decoration: none;
+    color: rgb(241, 167, 165);
+    font-weight: bold;
+    font-size: 30pt;
+    padding: 0px 25px;
+    
+    /* This transitions the next buttons when we hover */
+    transition: all 0.8s ease;
+    
+    /* These properties are the ones that change on hover */
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  /* hover of the previous button */
+  .carouselPrev0:hover {
+    
+    /* Transition all the properties that change */
+    transition: all .25s ease;
+    
+    /* These properties are the ones that need to change back */
+    opacity: 1;
+    background-color: rgba(0,0,0,0.15);
+  }
+  /* hover of the next button */
+  .carouselNext0:hover {
+    
+    /* Transition all the properties that change */
+    transition: all .25s ease;
+    
+    /* These properties are the ones that need to change back */
+    opacity: 1;
+    background-color: rgba(0,0,0,0.15);
+  }
+
+    
+  
+  /* Float our prev button to the left */
+  .carousel nav a:first-child {
+    float: left;
+  }
+  
+  /* Float our next button to the right */
+  .carousel nav a:last-child {
+    float: right;
+  }
+  
+  /* Place our caption over our image */
+  .carousel-caption {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: rgba(0,0,0,0.25);
+    height: 50px;
+    line-height: 50px;
+    margin: 0px;
+  }
+  
+  
+  html, body {
+    height: 100%;
+    display:block;
+    justify-content: center;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  body::before {
+    position: absolute;
+    content: "Hover over the carousel to show navigation";
+    font-size: 0.8em;
+    margin-top: 10px;
+    color: #999;
+    width: 500px;
+    text-align: center;
+  }
+
+/* End of Carousel */
+
+
+
+/* Space the footers the right way */
+.special_footer1{
+    margin-top: 826px;
+  }
+.special_footer2{
+  margin-top: 45px;
+}
+.special_footer3{
+  margin-top: 1670px;
+}
+
+
+/* Create a box the regroup the text and the carousel */
+.carousel_and_text{
+  margin-bottom: 70px;
+  padding: 8px; 
+  border: 3px solid black;
+  margin-left: 200px;
+  margin-right: 200px;
+
+}
+
+/* Center the text */
+.centered{
+  margin-left: 24px;
+}
